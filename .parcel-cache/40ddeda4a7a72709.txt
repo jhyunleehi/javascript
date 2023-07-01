@@ -1,8 +1,8 @@
-5978
+5980
 65C:\code\javascript\node_modules\entities\lib\encode-trie.d.ts.map133326754846233988 0
 38C:\code\javascript\node_modules\dotenv133326754843049330 1
 62C:\code\javascript\node_modules\@parcel\compressor-raw\LICENSE133326754840782845 0
-31C:\code\javascript\package.json133326754995450434 0
+31C:\code\javascript\package.json133326756331120281 0
 61C:\code\javascript\node_modules\svgo\plugins\removeDoctype.js133326754848603647 0
 117C:\code\javascript\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\AttributeSelector.js133326754844436396 0
 99C:\code\javascript\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\removeTitle.js133326754849776553 0
@@ -13,12 +13,12 @@
 49C:\code\javascript\node_modules\@msgpackr-extract133326754995348655 1
 63C:\code\javascript\node_modules\weak-lru-cache\rollup.config.js133326754842892103 0
 75C:\code\javascript\node_modules\caniuse-lite\data\features\link-icon-svg.js133326754855649606 0
-36C:\code\javascript\package-lock.json133326754995831411 0
+36C:\code\javascript\package-lock.json133326756331120281 0
 41C:\code\javascript\node_modules\commander133326754844203034 1
 57C:\code\javascript\node_modules\ordered-binary\index.d.ts133326754844767026 0
 63C:\code\javascript\node_modules\caniuse-lite\data\regions\VU.js133326754857810364 0
-27C:\code\javascript\main.css133326753972121586 0
-29C:\code\javascript\.gitignore133326755172413194 0
+27C:\code\javascript\main.css133326756331106453 0
+29C:\code\javascript\.gitignore133326756330875860 0
 69C:\code\javascript\node_modules\@swc\helpers\src\_new_arrow_check.mjs133326754855439309 0
 65C:\code\javascript\node_modules\caniuse-lite\data\features\let.js133326754855603282 0
 81C:\code\javascript\node_modules\dom-serializer\node_modules\entities\lib\index.js133326754842973689 0
@@ -30,14 +30,14 @@
 56C:\code\javascript\node_modules\abortcontroller-polyfill133326754845596838 1
 41C:\code\javascript\node_modules\is-number133326754842015347 1
 60C:\code\javascript\node_modules\domhandler\lib\node.d.ts.map133326754843371859 0
-23C:\code\javascript\dist133326755265176882 1
+23C:\code\javascript\dist133326756626645832 1
 86C:\code\javascript\node_modules\@swc\helpers\esm\_class_check_private_static_access.js133326754851896010 0
 85C:\code\javascript\node_modules\@babel\highlight\node_modules\color-convert\README.md133326754843256981 0
 76C:\code\javascript\node_modules\caniuse-lite\data\features\css-gencontent.js133326754852678209 0
 79C:\code\javascript\node_modules\entities\lib\generated\decode-data-xml.d.ts.map133326754845953815 0
 67C:\code\javascript\node_modules\@swc\helpers\_\_update\package.json133326754854863004 0
 61C:\code\javascript\node_modules\js-yaml\lib\schema\default.js133326754843546814 0
-29C:\code\javascript\index.html133326753180833950 0
+29C:\code\javascript\index.html133326756499914256 0
 50C:\code\javascript\node_modules\lmdb\src\windows.c133326754850549189 0
 63C:\code\javascript\node_modules\posthtml-parser\dist\index.d.ts133326754844069154 0
 64C:\code\javascript\node_modules\nth-check\lib\esm\index.d.ts.map133326754845477549 0
@@ -54,7 +54,7 @@
 38C:\code\javascript\node_modules\base-x133326754842242314 1
 76C:\code\javascript\node_modules\caniuse-lite\data\features\variable-fonts.js133326754857672563 0
 68C:\code\javascript\node_modules\@swc\helpers\_\_class_name_tdz_error133326754854126814 1
-26C:\code\javascript\main.js133326752967296545 0
+26C:\code\javascript\main.js133326756331106453 0
 40C:\code\javascript\node_modules\entities133326754846637741 1
 78C:\code\javascript\node_modules\csso\node_modules\css-tree\lib\syntax\index.js133326754852996761 0
 50C:\code\javascript\node_modules\lmdb\node-index.js133326754851991254 0
@@ -1123,6 +1123,7 @@
 53C:\code\javascript\node_modules\lmdb\dependencies\lz4133326754845550025 1
 77C:\code\javascript\node_modules\@parcel\transformer-svg\lib\SVGTransformer.js133326754843792098 0
 52C:\code\javascript\node_modules\ordered-binary\.idea133326754844949911 1
+46C:\code\javascript\dist\index.e5980c4e.css.map133326756626563489 0
 63C:\code\javascript\node_modules\csso\node_modules\css-tree\dist133326754853783774 1
 49C:\code\javascript\node_modules\is-glob\README.md133326754842343455 0
 48C:\code\javascript\node_modules\svgo\lib\svgo.js133326754850549189 0
@@ -5976,4 +5977,5 @@
 45C:\code\javascript\node_modules\.bin\svgo.ps1133326754858370488 0
 63C:\code\javascript\node_modules\.bin\update-browserslist-db.cmd133326754858370488 0
 41C:\code\javascript\dist\index.63aff760.js133326755265096911 0
-34C:\code\javascript\dist\index.html133326755264617068 0
+42C:\code\javascript\dist\index.e5980c4e.css133326756626563489 0
+34C:\code\javascript\dist\index.html133326756626645832 0
