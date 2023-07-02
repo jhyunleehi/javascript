@@ -1229,3 +1229,9 @@ function pickOnlyOne() {
 
 pickOnlyOne().then(console.log);
 ```
+
+* react 기존 앱에서 보수 및 확장이 필요하거나 빠르게 크로스플랫폼 앱개발까지 필요할 때 - React
+* vue 
+가벼운 서비스를 개발할 때, 개발에 관해 잘 모르는 상태에서 빠르게 성과를 내야할 때 - Vue
+* angular 
+규모가 큰 기업에서, 많은 기능을 구현해야 하고 확장성이 높은 어플리케이션을 개발할 때 - Angular
