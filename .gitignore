@@ -1,0 +1,11 @@
+react/my-app/node_modules
+
+react/my-app/node_modules
+react/my-app/.pnp
+react/my-app/.pnp.js
+
+# testing
+react/my-app/coverage
+
+# production
+/build
