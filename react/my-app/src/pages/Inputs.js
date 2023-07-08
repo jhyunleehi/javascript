@@ -1,23 +1,34 @@
 import { useState } from 'react';
 
 function Inputs() {
-    const [inputs, setTextValue] = useState({
-        name:"",
-        email:"",
-        tel:""
+    const [inputs, setInputs] = useState({
+        name: "",
+        email: "",
+        tel: ""
     });
 
 
-    function OnChange(e){
-        setTextValue(e.target.value);
+    function OnChange(e) {
+        const id = e.target.id;
+        const value = e.target.value
+        setInputs({
+            ...inputs,
+            [id]: value,
+        });
     }
+    const { name, email, tel } = inputs;
     return (
         <>
-            <labe Name/> <input type="text" value={inputs.name} onChange={OnChange()} />
-            <labe Email/><input type="email" value={inputs.email} onChange={OnChange()} />
-            <label Tel/><input type="tel" value={inputs.tel} onChange={OnChange()} />
+            <label>Name</label>
+            <input type="text" id="name" value={inputs.name} onChange={OnChange} />
             <br/>
-            <p>{inputs.name},{inputs.email},{inputs.tel}</p>
+            <label>Email</label>
+            <input type="email" id="email" value={inputs.email} onChange={OnChange} />
+            <br/>
+            <label>Tel</label>
+            <input type="tel" id="tel" value={inputs.tel} onChange={OnChange} />
+            <br />
+            <p>{name},{email},{tel}</p>
         </>
 
     );

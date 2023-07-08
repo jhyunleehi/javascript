@@ -8,7 +8,7 @@ function Input() {
     }
     return (
         <>
-            <input type="text" value={txvalue} onChange={OnChange()} />
+            <input type="text" value={txvalue} onChange={OnChange} />
             <br/>
             <p>{txvalue}</p>
         </>
