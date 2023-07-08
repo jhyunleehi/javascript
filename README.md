@@ -1,5 +1,8 @@
 # javascript
 
+[자바스크립트 학습](https://ko.javascript.info/)
+
+```
 ## data type
 
 ### 1. user strict
