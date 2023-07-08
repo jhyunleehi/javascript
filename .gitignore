@@ -12,3 +12,5 @@ react/my-app/coverage
 component/node_modules
 component/.pnp
 component/.pnp.js
+
+vanillajs-component/node_modules
