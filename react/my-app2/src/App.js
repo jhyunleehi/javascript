@@ -1,5 +1,6 @@
 
 import './App.css';
+import { useState } from 'react';
 
 function Header(props) {
   return <header>
@@ -20,17 +21,19 @@ function Nav(props) {
     lis.push(<li key={t.id} >
       <a id={t.id} href={'/read/' + t.id} onClick={event => {
         event.preventDefault();
-        props.onChangeMode(event.target.id);
+        props.onChangeMode(Number(event.target.id));
       }}> {t.title}
       </a>
     </li>)
   };
 
-  return <nav>
-    <ol>
-      {lis}
-    </ol>
-  </nav>
+  return <div>
+    <nav>
+      <ol>
+        {lis}
+      </ol>
+    </nav>
+  </div>
 }
 
 function Article(props) {
@@ -42,23 +45,42 @@ function Article(props) {
 }
 
 function App() {
+  const [mode, setMode] = useState('S1');
+  const [id, setId] = useState(null);
+  console.log(mode);
   const topics = [
-    { id: 1, title: "html1", bod: 'html is...' },
-    { id: 2, title: "html2", bod: 'html is...' },
-    { id: 3, title: "html3", bod: 'html is...' },
-    { id: 4, title: "html4", bod: 'html is...' },
+    { id: 1, title: "html1", body: 'html1 is...' },
+    { id: 2, title: "html2", body: 'html2 is...' },
+    { id: 3, title: "html3", body: 'html3 is...' },
+    { id: 4, title: "html4", body: 'html4 is...' },
   ]
+
+  let content = null;
+  if (mode === 'S1') {
+    content = <Article title="welcome" body="hello, Web" />
+  } else if (mode === 'S2') {
+    let t, b = null;
+    for (let i = 0; i < topics.length; i++) {
+      if (topics[i].id === id) {
+        t = topics[i].title;
+        b = topics[i].body;
+      }
+    }
+    content = <Article title={t} body={b} />
+  }
+
   return (
     <div className="App">
       <Header title="Web" onChangeMode={function () {
-        alert('Header')
+        setMode('S1');
+        //alert('Header')
       }} />
-      <Nav topics={topics} onChangeMode={(id)=>{
-        alert(id);
+      <Nav topics={topics} onChangeMode={(_id) => {
+        setMode('S2');
+        setId(_id)
+        //alert(id);
       }} />
-      <Article title="welcome" body="hello, Web" />
-      <Article title="welcome1" body="hello, Web2" />
-      <Article />
+      {content}
     </div>
   );
 }
