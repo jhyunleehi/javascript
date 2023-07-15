@@ -14,3 +14,7 @@ component/.pnp
 component/.pnp.js
 
 vanillajs-component/node_modules
+
+react/my-app1/node_modules
+react/my-app2/node_modules
+
