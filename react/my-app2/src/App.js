@@ -60,7 +60,7 @@ function Create(props) {
   </article>
 }
 
-function Update(props){
+function Update(props) {
   return <article>
     <h2>Update</h2>
     <form onSubmit={event => {
@@ -90,47 +90,79 @@ function App() {
   ]);
 
   let content = null;
-  let contextControl =null;
+  let contextControl = null;
 
-  if (mode === 'S1') {
-    content = <Article title="welcome" body="hello, Web" />
-  } else if (mode === 'S2') {
-    let t, b = null;
-    for (let i = 0; i < topics.length; i++) {
-      if (topics[i].id === id) {
-        t = topics[i].title;
-        b = topics[i].body;
-      };
-    }
-    content = <Article title={t} body={b} />
-    contextControl=<a href={'/update/'+id} onClick={event=>{
-      event.preventDefault();
-      setMode('UPDATE');
-    }}>Update</a>
-  } else if (mode === 'CREATE') {
-    content = <Create onCreate={(_title, _body) => {
-      const newTopic = { id: nextId, title: _title, body: _body }
-      const newTopics =[...topics]
-      newTopics.push(newTopic)
-      setTopics(newTopics);
-      setMode('S2');
-      setId(nextId);
-      setNextId(nextId+1);
-    }}></Create>
-  }else if (mode=='UPDATE'){
-    content=<Update onUpdate={(title,body)=>{
+  switch (mode) {
+    case 'WELCOME':
+      content = <Article title="welcome" body="hello, Web" />
+      break;
+    case 'READ':
+      let t, b = null;
+      for (let i = 0; i < topics.length; i++) {
+        if (topics[i].id === id) {
+          t = topics[i].title;
+          b = topics[i].body;
+        };
+      }
+      content = <Article title={t} body={b} />
+      contextControl = <>
+      <li><a href={'/update/' + id} onClick={event => {
+        event.preventDefault();
+        setMode('UPDATE');
+      }}>Update</a>
+      </li>
+      <li> <input type="button"value="Delete" onClick={()=>{
+        const tempTopics=[]
+        for (let i=0; i< topics.length; i++){
+          if (topics[i].id !==id){
+            tempTopics.push(topics[i]);
+          }
+        }
+        setTopics(tempTopics);
+        setMode('WELCOME');
+      }}/>
+      </li>
 
-    }}></Update>
+      </>
+      
+      break;
+    case 'CREATE':
+      content = <Create onCreate={(_title, _body) => {
+        const newTopic = { id: nextId, title: _title, body: _body }
+        const newTopics = [...topics]
+        newTopics.push(newTopic)
+        setTopics(newTopics);
+        setMode('READ');
+        setId(nextId);
+        setNextId(nextId + 1);
+      }}></Create>
+      break;
+    case 'UPDATE':
+      content = <Update onUpdate={(_title, _body) => {
+        const newTopics = [...topics]
+        const updateTopic = { id: nextId, title: _title, body: _body }
+        for (let i = 0; i < topics.length; i++) {
+          if (newTopics[i].id === id) {
+            newTopics[i] = updateTopic;
+            break;
+          };
+        }
+        setTopics(newTopics);
+        setMode('READ');
+        setId(nextId);
+      }}></Update>
+      break
+
   }
-
+ 
   return (
     <div className="App">
       <Header title="Web" onChangeMode={function () {
-        setMode('S1');
+        setMode('WELCOME');
         //alert('Header')
       }} />
       <Nav topics={topics} onChangeMode={(_id) => {
-        setMode('S2');
+        setMode('READ');
         setId(_id)
         //alert(id);
       }} />
