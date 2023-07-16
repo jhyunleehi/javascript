@@ -166,6 +166,7 @@ function App() {
         setId(_id)
         //alert(id);
       }} />
+ 
       {content}
       <div>
         <a href="/create" onClick={event => {
