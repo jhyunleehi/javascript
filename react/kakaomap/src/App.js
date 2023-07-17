@@ -1,33 +1,44 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useState,useEffect } from 'react';
+import Log from './pages/Log';
+import KakaoMap from './pages/KMap';
 
-function App() {
-  
-  
-  useEffect(() => { 
-  
-      console.log('script loaded!!!');  
-      const kakao = window['kakao']; 
-      kakao.maps.load(() => {
-        const mapContainer = document.getElementById('map');
-        const options = { 
-          center: new kakao.maps.LatLng(37.56000302825312, 126.97540593203321), //좌표설정
-          level: 3 
-        }; 
-        const map = new kakao.maps.Map(mapContainer, options); //맵생성
-        //마커설정
-        const markerPosition = new kakao.maps.LatLng(37.56000302825312, 126.97540593203321); 
-        const marker = new kakao.maps.Marker({ 
-          position: markerPosition
-        }); 
-        marker.setMap(map); 
-      });   
-  
+
+function App(props) {
+  const device = Object();
+  const [devices, setTopics] = useState([device]);
+
+  useEffect(() => {
+    let tempDeviceList = [];
+    fetch('http://jhyunleehi.ipdisk.co.kr:18080/api/v1/iotgateways', { method: 'GET', headers: { 'Content-Type': 'application/json' } })
+      .then(response => response.json())
+      .then((datas) => {
+        datas.forEach((d) => {
+          var device = {
+            faceId: d.faceid,
+            name: d.name,
+            mqttId: d.mqttId,
+            address: d.address,
+            x: d.x,
+            y: d.y,
+            manager: d.manager,
+            tel: d.tel,
+          };          
+          tempDeviceList.push(device);
+        })
+        setTopics(tempDeviceList);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+
   }, []);
+
 
   return (
     <div className="App">
-      <div id="map" className="map"/>
+      <div><KakaoMap device={devices} /></div>
+      <div><Log device={devices}/></div>
     </div>
   );
 }
