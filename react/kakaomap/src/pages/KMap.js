@@ -53,3 +53,7 @@ export default KakaoMap;
 //     marker.setMap(map);
 //   });
 // };
+
+
+//여기  참조해서 marker 보이기 테스트 
+// https://apis.map.kakao.com/web/sample/multipleMarkerControl/
