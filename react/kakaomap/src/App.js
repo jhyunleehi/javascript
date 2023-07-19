@@ -2,6 +2,8 @@ import './App.css';
 import { useState,useEffect } from 'react';
 import Log from './pages/Log';
 import KakaoMap from './pages/KMap';
+import TextAreaWithScroll from './pages/TextAreaWtihScroll';
+import WebSocketMessage from './pages/WebSocketMessage';
 
 
 function App(props) {
@@ -38,6 +40,7 @@ function App(props) {
   return (
     <div className="App">
       <div><KakaoMap device={devices} /></div>
+      <div><WebSocketMessage></WebSocketMessage></div>      
       <div><Log device={devices}/></div>
     </div>
   );
