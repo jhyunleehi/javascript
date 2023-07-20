@@ -44,7 +44,7 @@ function WebSocketMessage() {
                 <input type="text" placeholder="Enter message"></input>
                 <textarea ref={textareaRef} value={text} cols="50" rows="10"></textarea>
                 <button type="submit" onClick={sendMessage}>Send</button>
-            </form>
+            </form>     
         </div>
     )
 }
