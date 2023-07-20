@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Append Textarea Example</title>
+  <script>
+    function appendTextarea() {
+      // Create a new textarea element
+      var textarea = document.createElement('textarea');
+      
+      // Set any desired attributes for the textarea
+      textarea.id = 'newTextarea';
+      textarea.rows = '4';
+      textarea.cols = '50';
+
+      // Get the reference to the node you want to append after
+      var targetNode = document.getElementById('targetNode');
+
+      // Append the textarea after the target node
+      targetNode.parentNode.insertBefore(textarea, targetNode.nextSibling);
+    }
+  </script>
+</head>
+<body>
+  <h1>Append Textarea Example</h1>
+  
+  <!-- Node to append the textarea after -->
+  <div id="targetNode">Target Node</div>
+  
+  <!-- Button to trigger the appending of textarea -->
+  <button onclick="appendTextarea()">Append Textarea</button>
+</body>
+</html>
