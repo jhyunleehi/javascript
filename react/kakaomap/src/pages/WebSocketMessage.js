@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const socket = new WebSocket('ws://localhost:8080/api/v1/ws');
+const socket = new WebSocket('ws://jhyunleehi.ipdisk.co.kr:18080/api/v1/ws');
 
 
 function WebSocketMessage() {
