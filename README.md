@@ -1,4 +1,14 @@
+#### replit.com
+[https://replit.com/~](https://replit.com/~)
 
+#### codepen
+[https://codepen.io/](https://codepen.io/)
+
+#### vscode.dev
+[https://vscode.dev/](https://vscode.dev/)
+#### w3 school : react 
+[https://www.w3schools.com/react/default.asp](https://www.w3schools.com/react/default.asp)
+[https://www.w3schools.com/js/js_validation_api.asp](https://www.w3schools.com/js/js_validation_api.asp)
 
 #### react 강의 
 [https://ljh86029926.gitbook.io/coding-apple-react/](https://ljh86029926.gitbook.io/coding-apple-react/)
