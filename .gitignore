@@ -21,3 +21,4 @@ react/my-app3/node_modules
 react/*/node_modules
 */*/node_modules
 */*/*/node_modules
+*/node_modules
