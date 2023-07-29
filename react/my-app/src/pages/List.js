@@ -11,7 +11,7 @@ function UserList() {
     ]
 
     return (
-        <table border="1" cellpadding="5" cellspacing="0" >
+        <table border="1" cellPadding="5" cellSpacing="0" >
             <thead>
                 <tr>
                     <th>이름</th>

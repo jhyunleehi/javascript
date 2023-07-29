@@ -1,6 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+let cnt=1;
 
 function Inputs() {
+    console.log("==>", cnt++);
+
     const [inputs, setInputs] = useState({
         name: "",
         email: "",
@@ -16,6 +20,11 @@ function Inputs() {
             [id]: value,
         });
     }
+
+    useEffect(() => {
+        setInputs(false);
+        console.log("call-useEffect");
+    }, [])
 
     return (
         <div>
