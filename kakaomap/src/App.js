@@ -2,7 +2,6 @@ import './App.css';
 import { useState,useEffect } from 'react';
 import Log from './pages/Log';
 import KakaoMap from './pages/KMap';
-import TextAreaWithScroll from './pages/TextAreaWtihScroll';
 import WebSocketMessage from './pages/WebSocketMessage';
 
 
@@ -12,7 +11,8 @@ function App(props) {
 
   useEffect(() => {
     let tempDeviceList = [];
-    fetch('http://jhyunleehi.ipdisk.co.kr:18080/api/v1/iotgateways', { method: 'GET', headers: { 'Content-Type': 'application/json' } })
+    //fetch('http://jhyunleehi.ipdisk.co.kr:18080/api/v1/iotgateways', { method: 'GET', headers: { 'Content-Type': 'application/json' } })
+    fetch('http://localhost:8080/api/v1/iotgateways', { method: 'GET', headers: { 'Content-Type': 'application/json' } })
       .then(response => response.json())
       .then((datas) => {
         datas.forEach((d) => {

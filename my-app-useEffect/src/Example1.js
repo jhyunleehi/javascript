@@ -5,7 +5,7 @@ function Example1() {
     const [name, setName] = useState("");
 
     const changeName = (e) => {
-        //setName(e.target.value)
+        setName(e.target.value)
     }
 
     //렌더링 될 때 마다 실행
