@@ -38,6 +38,8 @@
 [JS-Google-Chart-API](https://velog.io/@geesuee/JS-Google-Chart-API-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0)
 
 [https://almende.github.io/vis/index.html#](https://almende.github.io/vis/index.html#)
+[https://d3js.org/](https://d3js.org/)
+[https://dev.to/theme_selection/10-javascript-chart-library-you-must-use-k20](https://dev.to/theme_selection/10-javascript-chart-library-you-must-use-k20)
 # react 
 
 
