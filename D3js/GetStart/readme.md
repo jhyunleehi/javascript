@@ -39,6 +39,9 @@ $ npm -v
 ### Create React application 
 ```sh
 $ npx create-react-app my-app
+$ npm init react-app my-app
+$ yarn create react-app my-app
+
 
 Creating a new React app in /home/jhyunlee/code/javascript/D3js/GetStart/my-app.
 Installing packages. This might take a couple of minutes.

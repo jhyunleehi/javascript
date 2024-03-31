@@ -2,7 +2,6 @@
 
 [자바스크립트 학습](https://ko.javascript.info/)
 
-```
 ## data type
 
 ### 1. user strict
@@ -27,6 +26,23 @@ let globalName = "global Name";
 }
 console.log(globalName);
 ```
+#### 자바스크립트에서 var를 사용하면 안되는 이유
+
+자바스크립트에서 var를 사용하지 않는 것이 권장되는 이유는 여러 가지가 있습니다. 여기에는 다음과 같은 이유들이 포함됩니다:
+
+1. 함수 스코프: var로 선언된 변수는 함수 스코프를 가집니다. 이는 변수가 선언된 함수 내에서만 유효하고 함수 외부에서는 접근할 수 없다는 것을 의미합니다. 이는 예상치 못한 변수 덮어쓰기나 값의 누출로 이어질 수 있습니다.
+
+2. 호이스팅: var로 선언된 변수는 호이스팅(hoisting)됩니다. 즉, 변수가 선언되기 전에도 해당 변수에 접근할 수 있습니다. 이는 코드의 가독성을 해치고 예상치 못한 동작을 유발할 수 있습니다.
+
+3. 재할당: var로 선언된 변수는 재할당이 자유롭게 가능합니다. 이는 의도치 않은 값의 변경이 발생할 수 있음을 의미합니다.
+
+4. 블록 스코프 부족: var는 블록 스코프를 제공하지 않습니다. ES6에서 도입된 let 및 const는 블록 스코프를 가지므로 블록 내에서 변수의 유효 범위를 제한할 수 있습니다.
+
+5. 변수 덮어쓰기의 위험: var로 선언된 변수는 같은 이름의 변수를 다시 선언할 수 있습니다. 이는 변수를 의도치 않게 덮어쓸 수 있는 위험을 내포합니다.
+
+6. 따라서 코드의 가독성, 예측 가능성 및 유지 관리 용이성을 위해 var보다는 let이나 const를 사용하는 것이 권장됩니다. 
+
+
 
 ### 3. constants
 
@@ -117,6 +133,9 @@ console.log(`vale: ${ellie.age} ${ellie.name}, type: ${typeof ellie}`);
 ```
 
 ### 2. Variable, rw(read/write)
+
+
+
 
 ```js
 // let (added in ES6)
@@ -239,7 +258,7 @@ console.log(`value: ${text}, type: ${typeof text}`);
 console.log(text.charAt(0));
 ```
 
----
+---.
 
 ## Function
 
@@ -353,6 +372,25 @@ function upgradeUser(user) {
   // long upgrade logic...
 }
 ```
+
+### 8. js에서 화살표 함수를 사용하는 이유
+
+자바스크립트에서 화살표 함수(arrow functions)를 사용하는 이유는 다음과 같습니다:
+
+1. 간결성: 화살표 함수는 함수를 더 간결하게 작성할 수 있습니다. 함수 표현식을 더 짧고 명료하게 표현할 수 있어 코드의 가독성을 향상시킵니다.
+
+2. 명시적인 this: 일반 함수의 경우, 함수가 호출될 때마다 this가 변경됩니다. 그러나 화살표 함수는 자신의 this를 가지지 않고, 외부 스코프의 this를 가져다 사용합니다. 이는 코드에서 this의 동작을 더 명시적으로 제어할 수 있게 합니다.
+
+3. 중첩된 함수에서의 사용 용이성: 화살표 함수는 중첩된 함수 내부에서 외부 함수의 this를 잃어버리지 않도록 보장합니다. 이는 콜백 함수나 이벤트 핸들러와 같은 상황에서 유용합니다.
+
+4. 클로저: 화살표 함수는 자동으로 클로저(closure)를 형성합니다. 이는 외부 스코프의 변수에 접근할 수 있게 합니다.
+
+5. 메소드로의 사용 용이성: 화살표 함수는 객체의 메소드로 사용할 때 특히 유용합니다. 일반 함수의 경우, 메소드 내부에서 this가 메소드를 호출한 객체를 가리키지 않을 수 있지만, 화살표 함수를 사용하면 명시적으로 this를 설정할 필요가 없습니다.
+
+6. 함수 바인딩을 피함: 화살표 함수는 자신의 this, arguments, super, new.target을 바인딩하지 않습니다. 이는 함수 바인딩에 대한 오버헤드를 줄이고 성능을 향상시킵니다.
+
+
+
 
 ## First-class function
 
@@ -1238,3 +1276,33 @@ pickOnlyOne().then(console.log);
 가벼운 서비스를 개발할 때, 개발에 관해 잘 모르는 상태에서 빠르게 성과를 내야할 때 - Vue
 * angular 
 규모가 큰 기업에서, 많은 기능을 구현해야 하고 확장성이 높은 어플리케이션을 개발할 때 - Angular
+
+
+
+
+
+## vscode 
+
+#### vs code config  npm debug
+1. npm start
+2. F5 bubug start 
+3. chrom 브라우져에서 url를 정확하게 입력: http://localhost:5501/D3js/t1/index.html
+4. chrom 브라우져에서 console 확인 
+
+```json
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [              
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
+```
