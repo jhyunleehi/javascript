@@ -1,0 +1,47 @@
+div {
+    color:red;
+    font-size: 25px;
+    margin: 20px;        
+    background-color: blue;
+    text-align: center;
+    width: 200px;
+}
+
+div:hover{
+    background-color: blueviolet;
+}
+
+li {
+    color: white;
+}
+
+.orange{
+    color: brown;
+}
+
+#apple{
+    color: aqua;
+}
+
+
+span.berry{
+    font-size: 10px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    transition: 1s;
+}
+
+.box:active{
+    width:300px
+}
+
+.text{
+    background-color: orange;
+}
+.text:focus{
+    height: 30px;
+}
